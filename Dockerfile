@@ -48,9 +48,3 @@ RUN chown -R www-data:www-data /var/www/html/* && \
     chmod -R 755 /var/www/html/*
 
 CMD bash launch.sh
-
-#docker prune ft_server pour supprimer tous les containers crees et non utilises actuellement
-#docker  container ls -a puis docker container rm ft_server
-#docker build
-
-#tu fais l'install commme si tu la faisais pour de vrai puis tu export sur php my admin et tu recuperes tout. Donc tu configures PHP my admin avant wordpress. ussi pense à recuperer le fichier wp - config
