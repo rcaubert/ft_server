@@ -17,4 +17,4 @@
 ```docker image prune```
 #### To login:
 ```uwordpress - password```
-``adminwordpress - password
+```adminwordpress - password```
