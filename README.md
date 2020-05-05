@@ -15,3 +15,6 @@
 #### To prune:
 ```docker container prune```
 ```docker image prune```
+#### To login:
+```uwordpress - password```
+``adminwordpress - password
