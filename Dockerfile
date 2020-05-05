@@ -6,7 +6,7 @@
 #    By: raubert <raubert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/05 11:32:38 by raubert           #+#    #+#              #
-#    Updated: 2020/05/05 11:36:16 by raubert          ###   ########.fr        #
+#    Updated: 2020/05/05 11:46:02 by raubert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ COPY ./srcs/ ./root/
 
 WORKDIR /root
 
-# Install mkcert and generate IPV4 and IPV6 certificate QUE VEUT DIRE SL et o
+# Install mkcert and generate IPV4 and IPV6 certificates
 RUN wget https://github.com/FiloSottile/mkcert/releases/download/v1.4.1/mkcert-v1.4.1-linux-amd64 && \
     mv mkcert-v1.4.1-linux-amd64 mkcert && \
     chmod +x mkcert && \
@@ -44,7 +44,7 @@ RUN service mysql start && \
     mysql -u root -e "FLUSH PRIVILEGES;" && \
 	mysql -u root -e "USE wordpress; SOURCE wordpress.sql;"
 
-# Install and configure PHPMyadmin (attention deux dernieres lignes)
+# Install and configure PHPMyadmin
 RUN wget -q https://files.phpmyadmin.net/phpMyAdmin/5.0.2/phpMyAdmin-5.0.2-all-languages.tar.gz && \
     tar xzf phpMyAdmin-5.0.2-all-languages.tar.gz -C /var/www/html/ && \
     mv /var/www/html/phpMyAdmin-5.0.2-all-languages /var/www/html/phpmyadmin && \
